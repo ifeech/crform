@@ -10,15 +10,7 @@ Class Template_CrForm extends Cr_Form {
 		return $template;
 	}
 	
-	protected function sendMail($valueMail){
-		foreach($this->mailTo as $email) $error = mail($email, $valueMail['subject'], $valueMail['message'], $valueMail['headers']);
-		return $error;
-	}
-	
-	protected function templateMail($fields, $srcTemplate){
-		include ($srcTemplate);
-		return $valueMail;
-	}
+
 
 	protected function templateError($text, $type, $srcTemplate){
 		if(empty($text) && empty($type)) return '';
